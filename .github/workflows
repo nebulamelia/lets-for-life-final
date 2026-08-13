@@ -1,15 +1,16 @@
 name: Refresh on CSV Change
+
 on:
   push:
     paths:
       - 'transforming.csv'  # First CSV file
-      - 'superior.csv'  # Second CSV file
-      - 'lingtrust.csv'  # Third CSV file
-      - 'Tenant Data.csv'  # Fourth CSV file
-      - 'lets4life.csv'  # Fifth CSV file
+      - 'superior.csv'      # Second CSV file
+      - 'lingtrust.csv'     # Third CSV file
+      - 'Tenant Data.csv'   # Fourth CSV file
+      - 'lets4life.csv'     # Fifth CSV file
 
 jobs:
-  build:
+  force-rebuild:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
